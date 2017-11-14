@@ -1,0 +1,15 @@
+<h1>Create a new Task</h1>
+
+<%= form_for(@task) do |f| %>
+  <%= f.label :name %>
+  <%= f.text_field :name %>
+
+  <%= f.label :description %>
+  <%= f.text_field :description %>
+
+  <%= f.label "Task done?" %>
+  <%= f.check_box :done %>
+
+  <%= f.submit "Submit" %>
+  <%= link_to "Go back", tasks_path %>
+<% end %>
